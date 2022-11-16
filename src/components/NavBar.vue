@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-      <RouterLink to="/" class="me-3 py-2 px-3">Accueil</RouterLink>
+      <RouterLink to="/" class="me-3 py-2 px-3">Home page</RouterLink>
       <RouterLink :to="{ name: 'contact' }" class="me-3 py-2 px-3">Contact</RouterLink>
     </nav>
   </header>
@@ -15,7 +15,7 @@ a:active, a:hover, a:visited, a:link {
 a.router-link-active,
 a.router-link-exact-active {
   color: #fff;
-  border-bottom: 5px solid rgb(48, 195, 67);
+  border-bottom: 5px solid rgb(45, 195, 68);
 }
 
 header {
