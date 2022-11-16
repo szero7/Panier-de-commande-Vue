@@ -13,7 +13,7 @@
         <!-- row 2 cols -->
         <div class="row">
           <div class="col-md-8">
-            <label :class="{invalid:invalidQuantity}">Quantité:
+            <label :class="{invalid:invalidQuantity}">Quantity:
               <input type="number" v-model="quantity" min="0" max="10" />
             </label>
           </div>
@@ -23,7 +23,7 @@
               :class="quantity > 0 ? 'btn-success' : 'btn-primary'"
               @click="addToCart()"
               :disabled="quantity < 1 || quantity > 10">
-              Ajouter
+              Add product
             </button>
           </div>
         </div>

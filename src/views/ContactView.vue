@@ -10,7 +10,7 @@
                 class="form-control"
                 id="name"
                 name="name"
-                placeholder="Nom"
+                placeholder="Name"
                 required
               />
             </div>
@@ -22,7 +22,7 @@
                 class="form-control"
                 id="email"
                 name="email"
-                placeholder="Courriel"
+                placeholder="Email"
                 required
               />
             </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="form-group mt-2">
           <button type="submit" class="btn btn-primary">
-            Soumettre
+            Submit
           </button>
         </div>
       </form>

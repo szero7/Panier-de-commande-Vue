@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Commande</h5>
+          <h5 class="card-title">Order</h5>
           <div class="card-text">
             <ul class="list-group">
               <li class="list-group-item" v-for="item in cart">
@@ -20,7 +20,7 @@
         <div class="row" v-if="cart.length > 0">
           <div class="d-grid col mx-3">
             <button class="btn btn-success" @click="isOrdered = !isOrdered">
-              Commander
+              Submit order
             </button>
           </div>
           <div class="d-grid col gap-2 py-2">Total: {{ totalPrice }}$</div>
@@ -28,7 +28,7 @@
 
         <div class="row" v-if="cart.length == 0">
           <div class="col-md-12">
-            <div class="alert alert-info">Votre panier est vide</div>
+            <div class="alert alert-info">Cart is empty</div>
           </div>
         </div>
 
@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group mt-2">
                   <button type="submit" class="btn btn-primary">
-                    Soumettre
+                    Submit
                   </button>
                 </div>
               </form>
@@ -84,7 +84,7 @@ export default {
   methods: {
     order() {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email) || this.email == "") {
-        alert("Veuillez entrer un courriel valide");
+        alert("Please fill a valid email");
         return;
       }
       fetch(
@@ -100,12 +100,12 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          alert("Commande effectuée");
+          alert("Order submitted successfully");
           this.cart.splice(0, this.cart.length);
           this.isOrdered = false;
           this.email = "";
         })
-        .catch((error) => alert("il y a eu une erreur lors de votre commande"));
+        .catch((error) => alert("something was wrong with your order. Please try again."));
     },
     removeFromCart(item) {
       this.cart.splice(this.cart.indexOf(item), 1);
