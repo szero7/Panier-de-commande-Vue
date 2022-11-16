@@ -1,7 +1,9 @@
 <template>
 <div class="container">
+
   <NavBar />
   <RouterView />
+
 </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
   },
   data() {
     return {
-      message: "Hello Vue!",
+      message: "Hello Vue JS!",
     };
   },
 };
@@ -25,7 +27,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #2c3e50;
+  color: #273644;
   margin-top: 20px;
 }
 
